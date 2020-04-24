@@ -108,32 +108,30 @@ if [ ! -f $config ]; then
     select yn in "Yes" "No"; do
 		case $yn in
 			Yes ) set_gapps_build=true;
-			break;
-			No  ) set_gapps_build=false;
-			break;
+			break;;
+			No ) set_gapps_build=false;
+			break;;
 		esac
 	done
-	if ["$set_gapps_build"= true ]; 
-	then 
-	export SAKURA_GAPPS=true
-	fi
+    if [ "$set_gapps_build" = true ] ; then
+			export SAKURA_GAPPS=true
+    fi
 	
 	#Official logic
-	    echo "Is the Build Sakura Official?"
+	echo "Is the Build Sakura Official?"
     set_official_build=false
     select yn in "Yes" "No"; do
 		case $yn in
 			Yes ) set_official_build=true;
-			break;
-			No  ) set_official_build=false;
-			break;
+			break;;
+			No ) set_official_build=false;
+			break;;
 		esac
 	done
-	if ["$set_official_build"= true ]; 
-	then 
-	export SAKURA_OFFICIAL=true
-	fi
-	
+    if [ "$set_official_build" = true ] ; then
+			export SAKURA_OFFICIAL=true
+    fi
+    
 	#Uploading logic
     echo "Upload compilation to remote server at end of build?"
     set_upload_build=false
