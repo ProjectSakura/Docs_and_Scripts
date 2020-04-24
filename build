@@ -103,7 +103,7 @@ if [ ! -f $config ]; then
     read set_ProjectSakura_path
     
     #GAPPS logic
-    echo "Is the Build with GAPPS?"
+    echo "Is the Build with GAPPS?(arm64 only)"
     set_gapps_build=false
     select yn in "Yes" "No"; do
 		case $yn in
@@ -115,6 +115,7 @@ if [ ! -f $config ]; then
 	done
     if [ "$set_gapps_build" = true ] ; then
 			export SAKURA_GAPPS=true
+			export TARGET_GAPPS_ARCH=arm64
     fi
 	
 	#Official logic
