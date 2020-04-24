@@ -1,6 +1,6 @@
 #!/bin/bash
-# Build crDroid and optionally upload to remote FTP server
-# Author: Gwolf2u (gwolfu@xda)
+# Build Sakura and optionally upload to remote FTP server
+# Author: Gwolf2u (gwolfu@xda) originally for crDroid.
 script_version=6.0.6
 
 # Specify colors utilized in the terminal
@@ -61,7 +61,7 @@ case $arg in
         rm -f $script_path"/devices.conf"
         exit 0 ;;
     "help" )
-        echo "This build script is used to be able to build crDroid and upload the builds to remote server"
+        echo "This build script is used to be able to build ProjectSakura and upload the builds to remote server"
         echo "Usage: ./build [OPTION]"
         echo ""
         echo "Commands supported:"
@@ -74,7 +74,7 @@ case $arg in
 esac
 
 echo "==========================================="
-echo "${cya}Initiate build script - v$script_version for crDroid 6.x"${txtrst}
+echo "${cya}Initiate build script - v$script_version for Project Sakura"${txtrst}
 echo "==========================================="
 
 #check script updates
@@ -99,8 +99,8 @@ config=$script_path"/config.conf"
 if [ ! -f $config ]; then
     echo "Configuration file is missing"
     echo "Creating..."
-    echo "Please enter the path where crDroid folder is located (full path ex:/home/<user>/crDroid)"
-    read set_crDroid_path
+    echo "Please enter the path where Sakura folder is located (full path ex:/home/<user>/<folder-name>)"
+    read set_ProjectSakura_path
     echo "Upload compilation to remote server at end of build?"
     set_upload_build=false
     select yn in "Yes" "No"; do
@@ -110,7 +110,7 @@ if [ ! -f $config ]; then
         esac
     done
     if [ "$set_upload_build" = true ] ; then
-        echo "Enter remote hostname (ex: upme.crdroid.net): "
+        echo "Enter remote hostname (ex: sourceforge): "
         read set_remote_hostname
         echo "Enter remote username:"
         read set_remote_username
@@ -120,7 +120,7 @@ if [ ! -f $config ]; then
 
     #create config file
 	echo "config_version=3" >> $config
-    echo "crDroid_path="$set_crDroid_path >> $config
+    echo "ProjectSakura_path="$set_ProjectSakura_path >> $config
     echo "upload_build="$set_upload_build >> $config
     echo "remote_hostname="$set_remote_hostname >> $config
     echo "remote_username="$set_remote_username >> $config
@@ -146,14 +146,14 @@ if [ ! -f $devices ]; then
 fi
 
 #check if already synced
-crdroid_synced=$crDroid_path/vendor/lineage/config/common.mk
-if [ ! -f $crdroid_synced ]; then
+ProjectSakura_synced=$ProjectSakura_path/vendor/lineage/config/common.mk
+if [ ! -f $ProjectSakura_synced ]; then
     echo "${ylw}Detected missing first sync... atempting first time sync..."${txtrst}
-    cd $crDroid_path
+    cd $ProjectSakura_path
     repo sync --force-sync --no-clone-bundle
 fi
 
-if [ ! -f $crdroid_synced ]; then
+if [ ! -f $ProjectSakura_synced ]; then
     read -p "${red}Something went wrong :( - Maybe misconfigured script!?"
     exit
 fi
@@ -176,7 +176,7 @@ function repopicking()
     fi
 }
 
-cd $crDroid_path
+cd $ProjectSakura_path
 echo "${blu}Run sync?${txtrst}"
 select yn in "Yes" "No"; do
     case $yn in
@@ -203,16 +203,16 @@ select yn in "Yes" "No"; do
 done
 
 #detect android version based on common.mk
-major_check=$(grep -n "PRODUCT_VERSION_MAJOR" $crDroid_path/vendor/lineage/config/common.mk | grep -Eo '^[^:]+')
+major_check=$(grep -n "PRODUCT_VERSION_MAJOR" $ProjectSakura_path/vendor/lineage/config/common.mk | grep -Eo '^[^:]+')
 array=( $major_check )
-android_major=$(sed -n ${array[0]}'p' < $crDroid_path/vendor/lineage/config/common.mk | cut -d "=" -f 2 | sed -r 's/[.]+//g' | tr -d '[:space:]')
-minor_check=$(grep -n "PRODUCT_VERSION_MINOR" $crDroid_path/vendor/lineage/config/common.mk | grep -Eo '^[^:]+')
+android_major=$(sed -n ${array[0]}'p' < $ProjectSakura_path/vendor/lineage/config/common.mk | cut -d "=" -f 2 | sed -r 's/[.]+//g' | tr -d '[:space:]')
+minor_check=$(grep -n "PRODUCT_VERSION_MINOR" $ProjectSakura_path/vendor/lineage/config/common.mk | grep -Eo '^[^:]+')
 array=( $minor_check )
-android_minor=$(sed -n ${array[0]}'p' < $crDroid_path/vendor/lineage/config/common.mk | cut -d "=" -f 2 | sed -r 's/[.]+//g' | tr -d '[:space:]')
+android_minor=$(sed -n ${array[0]}'p' < $ProjectSakura_path/vendor/lineage/config/common.mk | cut -d "=" -f 2 | sed -r 's/[.]+//g' | tr -d '[:space:]')
 android=$android_major"."$android_minor
-cr_check=$(grep -n "CR_VERSION" $crDroid_path/vendor/lineage/config/common.mk | grep -Eo '^[^:]+')
+cr_check=$(grep -n "CR_VERSION" $ProjectSakura_path/vendor/lineage/config/common.mk | grep -Eo '^[^:]+')
 array=( $cr_check )
-crDroid=$(sed -n ${array[0]}'p' < $crDroid_path/vendor/lineage/config/common.mk | cut -d "=" -f 2 | tr -d '[:space:]')
+ProjectSakura=$(sed -n ${array[0]}'p' < $ProjectSakura_path/vendor/lineage/config/common.mk | cut -d "=" -f 2 | tr -d '[:space:]')
 
 INFO=()
 
@@ -220,9 +220,9 @@ echo "==========================================="
 echo "${ylr}Setting build environment"${txtrst}
 echo "-------------------------------------------"
 echo "Script path set to: "${grn}$script_path${txtrst}
-echo "crDroid path set to: "${grn}$crDroid_path${txtrst}
+echo "ProjectSakura path set to: "${grn}$ProjectSakura_path${txtrst}
 echo "Upload complete build to remote server?: "${grn}$upload_build${txtrst}
-echo "Trying to compile crDroid "${grn}$crDroid${txtrst}" based on Android "${grn}$android${txtrst}
+echo "Trying to compile ProjectSakura "${grn}$ProjectSakura${txtrst}" based on Android "${grn}$android${txtrst}
 echo "==========================================="
 echo ""
 
@@ -241,14 +241,14 @@ do
         echo "${grn}Now building "${ylw}$device${txtrst}
     
         #set BuildID - aka name of the zip file from OUT folder at the end of the build
-        BuildID="crDroidAndroid-"$android"-"$(date -d "$D" '+%Y')$(date -d "$D" '+%m')$(date -d "$D" '+%d')"-"$device"-v"$crDroid".zip"
+        BuildID="ProjectSakuraAndroid-"$android"-"$(date -d "$D" '+%Y')$(date -d "$D" '+%m')$(date -d "$D" '+%d')"-"$device"-v"$ProjectSakura".zip"
     
         #initiate build script and start actual build
         . build/envsetup.sh
         brunch $device
         
         #define upload file path
-        uploadfile=$crDroid_path/out/target/product/$device/$BuildID
+        uploadfile=$ProjectSakura_path/out/target/product/$device/$BuildID
         echo "Checking build result status..."
         if [ -e "$uploadfile" ]; then
             echo "${grn}Seems compilation is ready for $device${txtrst}"
