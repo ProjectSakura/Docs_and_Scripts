@@ -218,15 +218,6 @@ select yn in "Yes" "No"; do
     esac
 done
 
-echo "${blu}For how many days you want changelog to be generated?${txtrst}"
-read days
-until [[ $days =~ ^-?[0-9]+$ ]]; do
-    echo "Invalid input - only numbers are allowed"
-    read days
-done
-export changelog_days=$days
-echo "${grn}Roger... $days days will be set for changelog generation${txtrst}"
-
 echo "${blu}Make clean build?${txtrst}"
 select yn in "Yes" "No"; do
     case $yn in
