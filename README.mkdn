@@ -75,3 +75,6 @@ list      - lists all devices that are configured to be built
 clean     - cleans up the configuration
 clear     - clears up all the devices on build list
 ```
+### Credit
+
+CrDroid Android for the script

@@ -79,7 +79,7 @@ echo "==========================================="
 
 #check script updates
 echo "Running update check..."
-wget -O check -q https://raw.githubusercontent.com/crdroidandroid/crdroid_build/10.0/build
+wget -O check -q https://raw.githubusercontent.com/ProjectSakura/build_script/10/build
 linenr=$(grep -n "script_version" check | grep -Eo '^[^:]+')
 array=( $linenr )
 online_version=$(sed -n ${array[0]}'p' < check | cut -d "=" -f 2 | sed -r 's/[.]+//g')
@@ -88,11 +88,11 @@ script_version=$(echo $script_version | sed -r 's/[.]+//g')
 if [ "$online_version" -gt "$script_version" ]; then
     echo "${ylr}A new version of this build script is available on GitHub"
     echo "Run below command to update before re-attempting to run again"
-    echo "${rer}curl -LJO https://raw.githubusercontent.com/crdroidandroid/crdroid_build/10.0/build${txtrst}"
+    echo "${rer}curl -LJO https://raw.githubusercontent.com/ProjectSakura/build_script/10/build${txtrst}"
     read -p "${ylr}Press enter to exit${txtrst}"
     exit 0
 else
-    echo "${grr}Seems you are running latest build script version available ㋡${txtrst}"
+    echo "${grr}Great you are using the latest version of the script 😀${txtrst}"
 fi
 
 config=$script_path"/config.conf"
@@ -302,10 +302,10 @@ do
         echo "${ylw}Warning for device" $codename${txtrst}
     elif [[ $i == *"2"* ]]; then
         codename=${i//2}
-        echo "${grn}Device" $codename "compiled and uploaded successfully ㋡${txtrst}"
+        echo "${grn}Device" $codename "compiled and uploaded successfully 😀${txtrst}"
     else
         codename=${i//3}
-        echo "${grn}Device" $codename "compiled successfully ㋡ (consider uploading build?)${txtrst}"
+        echo "${grn}Device" $codename "compiled successfully 😀 (consider uploading build?)${txtrst}"
     fi
 done
 
