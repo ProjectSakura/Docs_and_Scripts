@@ -161,21 +161,21 @@ if [ ! -f $config ]; then
     echo "${grn}Successfully created configuration file at ${ylw}$script_path/config.conf${txtrst}"
     echo "Please run \"${grn}./build add${txtrst}\" to add new devices for build script"
     echo "For a list of availble commands, run \"${grn}./build help${txtrst}\""
-    exit 0
+    return
 fi
 
 #read configuration
 source config.conf
 if [[ -z ${config_version+x} ]] || (( "$config_version" < "3" )); then
 	echo "${red}Configuration file is outdated. Please run ${ylw}./build clean ${red}followed by ${ylw}./build ${red}to regenerate it"
-	exit 1
+	return 1
 fi
 
 devices=$script_path"/devices.conf"
 if [ ! -f $devices ]; then
     echo "${red}There are no devices configured to be built"
     echo "Run \"./build add\" to add a new device"${txtrst}
-    exit 1  # fail
+    return 1  # fail
 fi
 
 #check if already synced
@@ -188,7 +188,7 @@ fi
 
 if [ ! -f $ProjectSakura_synced ]; then
     read -p "${red}Something went wrong :( - Maybe misconfigured script!?"
-    exit
+    return
 fi
 
 PATH=~/bin:$PATH
