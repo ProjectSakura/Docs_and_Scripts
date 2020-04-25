@@ -1,9 +1,9 @@
-# crDroid build script #
+# Project-Sakura build script #
 
 ### Description ###
 
-This bash script is used to build crDroid and upload via FTP.  
-With proper settings, it's also possible to push to crDroid SourceForge page automatically.
+This bash script is used to build ProjectSakura and upload via FTP.  
+With proper settings, it's also possible to push to SourceForge automatically.
 
 ### How to Install
 
@@ -12,11 +12,11 @@ To do so run following commands in terminal:
 
 ```bash
 # Download the script with curl
-$ curl -LJO https://raw.githubusercontent.com/crdroidandroid/crdroid_build/10.0/build
+$ curl -LJO https://raw.githubusercontent.com/ProjectSakura/build_script/10/build
 # Make script executable
 $ chmod +x build
 # run the script
-$ ./build
+$ . build (for the first time only)
 ```
 
 ### Configuration
@@ -26,12 +26,12 @@ For that just issue **./build** in terminal and follow the on-screen instruction
 
 ```bash
 $ ./build
-$ Please enter the path where crDroid folder is located (full path ex:/home/<user>/crDroid)
-$ /home/user/crDroid
+$ Please enter the path where Sakura folder is located (full path ex:/home/<user>/<folder-name>)
+$ /home/user/sakura
 $ Upload compilation to remote server at end of build?
 $ 1 or 2 (Yes/No)
-$ Enter remote hostname (ex: upme.crdroid.net):
-$ upme.crdroid.net
+$ Enter remote hostname (ex: sourceforge):
+$ frs.sourceforge.net
 $ Enter remote username::
 $ user
 $ Enter remote password:
@@ -45,7 +45,7 @@ Running **./build add** will prompt you to enter your device information.
 $ ./build add
 $ Add a new device:
 $ Format: <device codename>,<remote upload path>
-$ guacamole,/files/guacamole/6.x
+$ X00T
 ```
 
 
@@ -65,7 +65,7 @@ In order to start building, issue the following command in terminal
 Issue **./build help** in terminal for a list of helpfull commands
 
 ```bash
-This build script is used to be able to build crDroid and upload the builds to remote server
+This build script is used to be able to build Project Sakura and upload the builds to remote server
 Usage: ./build [OPTION]
 
 Commands supported:
