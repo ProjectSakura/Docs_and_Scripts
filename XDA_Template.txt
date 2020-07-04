@@ -1,0 +1,88 @@
+[CENTER]
+[IMG]https://i.imgur.com/3n4NiPo.jpg[/IMG]
+
+[SIZE="25"][B][FONT="Trebuchet MS"]About US:[/B][/SIZE][/FONT]
+Project Sakura is a custom ROM built around Lineage OS 17.1, It tries to remain true to it while also providing some more functionality and UI changes.
+
+[B][SIZE="7"]DISCLAIMER[/SIZE][/B]
+[CODE]
+ * Your warranty is now void.
+ * We are not responsible for anything that may happen to your phone by installing any custom ROMs and/or kernels. 
+ * You do it at your own risk and take the responsibility upon yourself and you are not to blame us or XDA and its respected developers.
+ [/CODE]
+
+[SIZE="3"]"This is a user friendly thread, all your suggestions are important to us and will be taken into consideration.."[/SIZE]
+
+[B][SIZE="7"]FLASHING PROCEDURE[/SIZE][/B]
+
+[SIZE="4"][color="#e34036"][B]CLEAN FLASH :[/B][/SIZE][/COLOR]
+[SIZE="4"]Download the Build you want to flash, there are two variants(GAPPS AND VANILLA ).
+Reboot to recovery 
+Take Backup (Not Necessary)
+Wipe System, Data, Cache , Dalvik
+Flash the latest build
+Reboot[/SIZE]
+
+[SIZE="4"][color="#e34036"][B]DIRTY FLASH :[/B][/SIZE][/COLOR]
+[SIZE="4"]Download the latest build 
+Reboot to recovery
+Flash the latest build and GApps(Not needed if you are flashing GAPPS build)
+Wipe Cache
+Reboot[/SIZE]
+Note : GApps only has to be flashed once whereas Magisk is to be flashed every time you Dirty Flash the ROM.
+
+[IMG]https://i.imgur.com/THP9Hz3.jpg[/IMG]
+[SIZE="3"]Download ROM[B]:[URL="https://projectsakura.github.io/download.html"]PROJECT SAKURA[/URL][/SIZE][/B]
+
+[B][SIZE="7"]CREDITS[/SIZE][/B]
+[SIZE="4"]
+[FONT="Comic Sans MS"]Lineage OS[/FONT]
+[FONT="Comic Sans MS"]AOSP[/FONT]
+[FONT="Comic Sans MS"]Superior OS[/FONT]
+[FONT="Comic Sans MS"]AOSiP[/FONT]
+[FONT="Comic Sans MS"]DerpFest[/FONT] 
+[FONT="Comic Sans MS"]Pixel Experience[/FONT]
+[FONT="Comic Sans MS"]Extended UI[/FONT]
+[FONT="Comic Sans MS"]Havoc OS[/FONT]
+[FONT="Comic Sans MS"]CrDroid ROM[/FONT]
+[/SIZE]
+
+
+[U][SIZE=6][B][COLOR=#2ba851] [I]Important Links[/I][/COLOR][/B][/SIZE][/U]
+
+[IMG]https://i.imgur.com/g9ZtCTS.jpg[/IMG]
+[URL="https://www.buymeacoffee.com/lBUDKgM"][IMG]https://raw.githubusercontent.com/SuperiorOS/superior_extras/master/img/cash.png[/IMG][/URL]
+
+[B][SIZE="7"]SOURCES[/SIZE][/B]
+[URL="https://github.com/ProjectSakura"]
+
+[IMG]https://raw.githubusercontent.com/SuperiorOS/superior_extras/master/img/github.png[/IMG]
+[SIZE="5"][B]Project Sakura Source[/URL][/B][/SIZE]
+
+[IMG]https://i.imgur.com/JLMzUXY.jpg[/IMG]
+[B][URL="https://t.me/ProjectSakura"]Telegram Group[/URL][/B]
+
+[U][B][SIZE="4"][FONT="Arial Black"][COLOR="#e34036"]REPORTING BUGS[/COLOR][/FONT]![/SIZE][/B][/U]
+As soon as the problem occurs, take a logcat! 
+[URL="http://telegra.ph/Logcats-are-important-03-01"]for more READ THIS[/URL][/CENTER]
+
+[B][U][SIZE="4"][NOPARSE]XDA:DevDB Information[/NOPARSE][/SIZE][/U][/B]
+[SIZE="3"][B]Project Sakura, ROM for the codename[/B][/SIZE]
+[B]Device:[/B] X00T
+[B]Maintainer:[/B] Your-Name
+[B]Build Type:[/B] Official
+
+[B][U]Contributors[/U][/B]
+Your-name
+[B]Kernel Source:[/B]  
+
+[B]ROM OS Version:[/B] 10.0
+[B]ROM Kernel:[/B] Linux 4.4
+[B]ROM Firmware Required:[/B] Must be on Latest Firmware
+[B]Based On:[/B] AOSP
+
+[B][U]Version Information[/U][/B]
+[B]Status:[/B] Stable
+[B]Current Stable Version:[/B] 1.Q
+[B]SELinux Status:[/B] Enforced
+[B]Stable Release Date:[/B] 2020-May-15
