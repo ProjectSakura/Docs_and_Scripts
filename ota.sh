@@ -19,7 +19,7 @@ msg=$(mktemp)
       echo -e "romtype": "nightly",
       echo -e "Size ${size}"
       echo -e "url: paste the url here"
-      echo -e "version": "1.Q"
+      echo -e "version": "2.Q"
    } > "${msg}"
 
 BJSON=$(cat "${msg}")
