@@ -53,7 +53,7 @@ echo "DONE!"
 
 #Cloning OTA repo and pushing to it.
 echo "####### STARTING PROCESS TO PUSH THE COMMIT #######"
-cp -R ${set_codename}.json "${set_ProjectSakura_path}"
+cp -R ${set_codename}.json "${set_ProjectSakura_path}" && cd -
 echo "Cloning OTA repo now.."
 git clone https://github.com/ProjectSakura/OTA
 echo "DONE!"
