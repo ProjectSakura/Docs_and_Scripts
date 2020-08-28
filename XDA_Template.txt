@@ -79,10 +79,10 @@ Your-name
 [B]ROM OS Version:[/B] 10.0
 [B]ROM Kernel:[/B] Linux 4.4
 [B]ROM Firmware Required:[/B] Must be on Latest Firmware
-[B]Based On:[/B] AOSP
+[B]Based On:[/B] LineageOS
 
 [B][U]Version Information[/U][/B]
 [B]Status:[/B] Stable
-[B]Current Stable Version:[/B] 1.Q
+[B]Current Stable Version:[/B] 2.Q
 [B]SELinux Status:[/B] Enforced
 [B]Stable Release Date:[/B] 2020-May-15
