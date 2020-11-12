@@ -1,17 +1,16 @@
 [CENTER]
 [IMG]https://raw.githubusercontent.com/ProjectSakura/SakuraDocs/master/assets/header.png[/IMG]
 
-[IMG]https://raw.githubusercontent.com/ProjectSakura/SakuraDocs/master/assets/aboutus.png[/IMG]
-Project Sakura is a custom ROM based on Lineage OS, It tries to remain true to it while also providing some more functionality and UI changes.
+[SIZE="4"]Project Sakura is a custom ROM based on Lineage OS, It tries to remain true to it while also providing some more functionality and UI changes. Its sole purpose is to provide a platform which is powered by Lineage and is more customisable than Lineage.[/SIZE]
 
 [IMG]https://raw.githubusercontent.com/ProjectSakura/SakuraDocs/master/assets/disclaimer.png[/IMG]
-[CODE]
+[SIZE="4"][CODE]
  * Your warranty is now void.
  * We are not responsible for anything that may happen to your phone by installing any custom ROMs and/or kernels. 
  * You do it at your own risk and take the responsibility upon yourself and you are not to blame us or XDA and its respected developers.
  [/CODE]
 
-[SIZE="3"]"This is a user friendly thread, all your suggestions are important to us and will be taken into consideration."[/SIZE]
+"This is a user friendly thread, all your suggestions are important to us and will be taken into consideration."[/SIZE]
 
 [IMG]https://raw.githubusercontent.com/ProjectSakura/SakuraDocs/master/assets/flashing.png[/IMG]
 
@@ -27,7 +26,7 @@ Project Sakura is a custom ROM based on Lineage OS, It tries to remain true to i
 -Reboot[/SIZE]
 
 [IMG]https://raw.githubusercontent.com/ProjectSakura/SakuraDocs/master/assets/download.png[/IMG]
-[SIZE="3"][B]:[URL="https://projectsakura.github.io/download.html"]DOWNLOAD[/URL][/SIZE][/B]
+[SIZE="4"][B][URL="https://projectsakura.github.io/download.html"]DOWNLOAD[/URL][/SIZE][/B]
 
 [IMG]https://raw.githubusercontent.com/ProjectSakura/SakuraDocs/master/assets/credits.png[/IMG]
 [SIZE="4"]
@@ -45,23 +44,23 @@ Project Sakura is a custom ROM based on Lineage OS, It tries to remain true to i
 
 [IMG]https://raw.githubusercontent.com/ProjectSakura/SakuraDocs/master/assets/donate.png[/IMG]
 
-[URL="https://www.buymeacoffee.com/lBUDKgM"][IMG]https://github.com/ProjectSakura/SakuraDocs/master/assets/charity.png[/IMG][/URL]
+[SIZE="4"][URL="https://www.buymeacoffee.com/lBUDKgM"][IMG]https://tctgaming.com/wp-content/uploads/2017/12/buy-me-a-coffee.png[/IMG][/URL][/SIZE]
 
 [IMG]https://raw.githubusercontent.com/ProjectSakura/SakuraDocs/master/assets/source.png[/IMG]
 [URL="https://github.com/ProjectSakura"]
 
 [IMG]https://raw.githubusercontent.com/ProjectSakura/SakuraDocs/master/assets/github.png[/IMG]
-[SIZE="5"][B]Project Sakura Source[/URL][/B][/SIZE]
+[SIZE="4"][B]Project Sakura Source[/URL][/B][/SIZE]
 
 [IMG]https://raw.githubusercontent.com/ProjectSakura/SakuraDocs/master/assets/support.png[/IMG]
-[SIZE="5"][B][URL="https://t.me/ProjectSakura"]Telegram Group[/URL][/B][/SIZE="5"]
+[SIZE="4"][URL="https://t.me/ProjectSakura"]Telegram Group[/URL][/SIZE]
 
 [U][B][SIZE="4"][FONT="Verdana"][COLOR="#e34036"]REPORTING BUGS[/COLOR][/FONT]![/SIZE][/B][/U]
-As soon as the problem occurs, take a logcat! 
-[URL="http://telegra.ph/Logcats-are-important-03-01"]for more READ THIS[/URL][/CENTER]
+[SIZE="4"]As soon as the problem occurs, take a logcat! 
+[URL="http://telegra.ph/Logcats-are-important-03-01"]for more READ THIS[/URL][/SIZE][/CENTER]
 
-[IMG]https://raw.githubusercontent.com/ProjectSakura/SakuraDocs/master/assets/miscinfo.png[/IMG]
-[SIZE="3"][B]Project Sakura, ROM for the codename[/B][/SIZE]
+[SIZE="4"][IMG]https://raw.githubusercontent.com/ProjectSakura/SakuraDocs/master/assets/miscinfo.png[/IMG]
+[B]Project Sakura, ROM for codename[/B]
 [B]Device:[/B] Codename of your device
 [B]Maintainer:[/B] Your-Name
 [B]Build Type:[/B] Unofficial/Official
@@ -80,4 +79,4 @@ XYZ
 [B]Status:[/B] Stable/Testing
 [B]Current Stable Version:[/B] 3.R
 [B]SELinux Status:[/B] Enforced/Permissive
-[B]Release Date:[/B] 202X-Month-Day
+[B]Release Date:[/B] 202X-Month-Day[/SIZE]
